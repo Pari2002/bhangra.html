@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"
+ type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet"
+  type="text/css"> 
+  <link href="https://fonts.googleapis.com/css?family=Kavoon" rel="stylesheet" type="text/css"> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font-family: 'Oswald', sans-serif;
+      line-height: 1.8;
+      color: #818181;
+	  background-color: #ADD8E6;
+  }
+  img {
+	  width: 350px;
+	  length:350px;
+  }
+  h1{
+  font-family: 'Anton', sans-serif;
+}
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: #f45098;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #FFFF00;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #FFD700;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 700px;
+      height: 300px;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #876546;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #6544ab !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #236775;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #50C878;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .col-sm-4 p {
+  	 font-size: 40px;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">about</a></li>
+        <li><a href="#portfolio">portfolio</a></li>
+        <li><a href="#pricing">pricing</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>BHANGRA</h1> 
+  <p>We specialize bhangra</p> 
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About BHANGRA</h2><br>
+      <h4>The origins of traditional Bhangra are speculative. According to Dhillon (1998), Bhangra is related to the Punjabi dance 'bagaa' which is a martial dance of Punjab.[2] However, the folk dance of Majha originated in Sialkot and took root in Gujranwalla, Sheikhupur, Gujrat (districts in Punjab, Pakistan) and Gurdaspur (district in Punjab, India).[2][3][4] The traditional form of Bhangra danced in the villages of Sialkot district is regarded as the standard.[5] Although the main districts where traditional Bhangra is performed are in Punjab, Pakistan, the community form of traditional Bhangra has been maintained in Gurdaspur district, Punjab, India and has been maintained by people who have settled in Hoshiarpur, Punjab India[6] after leaving what is now Punjab, Pakistan. Traditional Bhangra is performed in a circle[7] and is performed using traditional dance steps. Traditional Bhangra is now also performed on occasions other than during the harvest season[8] and is popular in Pakistan.[9]</h4><br>
+      <p>
+The 1950s saw the development of the free form traditional Bhangra in Punjab, India which was patronised by the Maharaja of Patiala who requested a staged performance of Bhangra in 1953. The first significant developers of this style were a dance troupe led by brothers from the Deepak family of Sunam (Manohar, Avtar and Gurbachan) and the dhol player Bhana Ram Sunami.[19] Free form traditional Bhangra developed during stage performances which incorporate traditional Bhangra moves and also include sequences from other Punjabi dances, namely, Luddi, Jhummar, Dhamaal, and Gham Luddi. The singing of Punjabi folk songs, bolian, are incorporated from Malwai Giddha.[2].</p>
+      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+    </div>
+    <div class="col-sm-4">
+      <img src="http://c8.alamy.com/comp/BM182D/bhangra-the-traditional-folk-dance-from-punjab-in-north-india-BM182D.jpg">
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2><br>
+      <h4><strong>MISSION:</strong>Great dancers are not great because of their technique,they are great because of their passion.</h4><br>
+      <p></p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-4">
+    
+    <a href="#demo" data-toggle="collapse">
+      <img src="https://i.ytimg.com/vi/vD-LFksC1Nc/maxresdefault.jpg" class="img-circle person" alt="Random Name">
+    </a>
+    <div id="demo" class="collapse">
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <p class="text-center"><strong>Bhangra Empire</strong></p><br>
+    <a href="#demo2" data-toggle="collapse">
+      <img src="https://i.ytimg.com/vi/gFBOfGbHDPU/maxresdefault.jpg" class="img-circle person" alt="Random Name">
+    </a>
+    <div id="demo2" class="collapse">
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <a href="#demo3" data-toggle="collapse">
+      <img src="http://www.rafu.com/wp-content/uploads/2010/03/Bhangra-Empire-1.jpg" class="img-circle person" alt="Random Name">
+    </a>
+    <div id="demo3" class="collapse">
+    </div>
+  </div>
+</div>
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+ 
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Portfolio</h2><br>
+  <h4>What we have created</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src=https://d3n8a8pro7vhmx.cloudfront.net/vibc/pages/35/attachments/original/1416998158/TransFusion_2014_Finale.jpg?1416998158
+        <p><strong></strong></p>
+        
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://www.artistoncall.in/images/service/63.jpg" alt="New York" width="400" height="300">
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="http://thedancezone.co.in/wp-content/uploads/2016/02/Bhangra3-1024x682.jpg">
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>What our customers say</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"great dancers came out of our school"<br><span></span></h4>
+      </div>
+      <div class="item">
+        <h4>"bhangra routine is absolutely amazing!"<br><span></span></h4>
+      </div>
+      <div class="item">
+        <h4>"we are punjabi we break bones not hearts"<br><span></span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Choose a payment plan that works for you</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Primary</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>45 min</strong> Friday</p>
+          <p><strong>1 hour</strong> Tuesday</p>
+          <p><strong>1 hour 15 min</strong> Thursday</p>
+          <p><strong>1 hour</strong> Monday </p>
+        </div>
+        <div class="panel-footer">
+          <h3>$20</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Regular</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>1 hour</strong> Monday</p>
+          <p><strong>2 hour</strong> Tuesday</p>
+          <p><strong>3 hour</strong> Wednesday</p>
+          <p><strong>4 hour</strong> Thursday </p>
+          <p><strong>5 hour</strong> Friday</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$30</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Supreme</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>1 hour</strong> January</p>
+          <p><strong>2 hour</strong> February</p>
+          <p><strong>3 hour</strong> March</p>
+          <p><strong>4 hour</strong> April</p>
+          <p><strong>5 hour</strong> May</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$50</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>our customer operators are always here for you.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Punjab</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +919728184727</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>punjabibhangra@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+	  <form action="http://www.SnapHost.com/captcha/send.aspx" id="ContactUsCaptchaWebForm" method="post" onsubmit="return ValidateForm(this);" target="_top">
+	  <input name="skip_WhereToSend" type="hidden" value="parneetkaur@jamaicagateway.net" />
+	  <input name="skip_SnapHostID" type="hidden" value="T9LR3YR53ANF" />
+	  <input name="skip_WhereToReturn" type="hidden" value="http://www.YourWebsiteAddress.com/ThankYouPage.htm" />
+	  <input name="skip_Subject" type="hidden" value="Contact Us Form" />
+	  <input name="skip_ShowUsersIp" type="hidden" value="1" />
+	  <input name="skip_SendCopyToUser" type="hidden" value="1" />
+	  <script type="text/javascript">
+	  function ValidateForm(frm) {
+	  if (frm.Name.value == "") {alert('Name is required.');frm.Name.focus();return false;}
+	  if (frm.FromEmailAddress.value == "") {alert('Email address is required.');frm.FromEmailAddress.focus();return false;}
+	  if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) {alert('Please enter a valid email address.');frm.FromEmailAddress.focus();return false;}
+	  if (frm.Comments.value == "") {alert('Please enter comments or questions.');frm.Comments.focus();return false;}
+	  if (frm.skip_CaptchaCode.value == "") {alert('Enter web form code.');frm.skip_CaptchaCode.focus();return false;}
+	  return true; }
+	  function ReloadCaptchaImage(captchaImageId) {
+	  var obj = document.getElementById(captchaImageId);
+	  var src = '' + obj.src;
+	  obj.src = '';
+	  var date = new Date();
+	  var pos = src.indexOf('&rad=');
+	  if (pos >= 0) { src = src.substr(0, pos); }
+	  obj.src = src + '&rad=' + date.getTime();
+	  return false; }
+	  </script>
+	  <table border="0" cellpadding="5" cellspacing="0" width="600">
+	  <tr>
+	  <td><b>Name*:</b></td>
+	  <td><input name="Name" type="text" maxlength="60" style="width:350px;" /></td>
+	  </tr><tr>
+	  <td><b>Phone number:</b></td>
+	  <td><input name="PhoneNumber" type="text" maxlength="43" style="width:350px;" /></td>
+	  </tr><tr>
+	  <td><b>Email address*:</b></td>
+	  <td><input name="FromEmailAddress" type="text" maxlength="60" style="width:350px;" /></td>
+	  </tr><tr>
+	  <td><b>Comments and questions*:</b></td>
+	  <td><textarea name="Comments" rows="7" cols="40" style="width:350px;"></textarea></td>
+	  </tr><tr>
+	  <td colspan="2" align="center"> <br />
+	  <table border="0" cellpadding="0" cellspacing="0">
+	  <tr><td colspan="2" style="padding-bottom:18px;">
+	  <!-- Please check our ProCaptcha service which is ad-free:
+	  http://www.SnapHost.com/captcha/ProCaptchaOverview.aspx -->
+	  <a href="http://www.snaphost.com/captcha/ReadyForms/ContactUsForm.aspx" alt="html email contact form" title="html email contact form">
+	  html email contact form</a></td></tr>
+	  <tr valign="top"><td> <i>Enter web form code*:</i>
+	  <input name="skip_CaptchaCode" type="text" style="width:80px;" maxlength="6" />
+	  </td><td>
+	  <a href="http://www.snaphost.com/captcha/ReadyForms/ContactUsForm.aspx"><img id="CaptchaImage" alt="Contact Us form" title="HTML code for Contact Us form"
+	  style="margin-left:20px;"
+	  src="http://www.SnapHost.com/captcha/CaptchaImage.aspx?id=T9LR3YR53ANF&ImgType=2" /></a><br />
+	  <a href="#" onclick="return ReloadCaptchaImage('CaptchaImage');"><span style="font-size:12px;">reload image</span></a> </td></tr>
+	  </table> <br />
+	  * - required fields. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	  <input name="skip_Submit" type="submit" value="Submit" />
+	  </td></tr>
+	  </table><br />
+	  </form>
+    </div>
+  </div>
+</div>
+
+<!-- Add Google Maps -->
+<div id="googleMap" style="height:400px;width:100%;"></div>
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(31.1471, 75.3412);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQNMj-P3Oy2W2_q0zSosjoqXbV3dI3db0&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+<script>
+    $("button").on("click", function() {
+      alert("thanks bhai!");
+    });
+  </script>
+</html>
